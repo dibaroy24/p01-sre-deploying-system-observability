@@ -1,6 +1,7 @@
 resource "aws_instance" "web" {
   ami           = var.aws_ami
   instance_type = "t3.micro"
+  subnet_id     = "subnet-0aa7a2a3113c46086"
   key_name = "udacity"
   tags = {
     Name = "ubuntu"

@@ -14,4 +14,7 @@
    aws_ami            = "ami-091d98080519849fa"
    private_subnet_ids = module.vpc.private_subnet_ids
    vpc_id             = module.vpc.vpc_id
+   depends_on = [
+    aws_key_pair.udacity
+   ]
  }

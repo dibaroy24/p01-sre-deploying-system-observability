@@ -3,7 +3,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
   # subnet_id   = "subnet-0aa7a2a3113c46086"
   # subnet_id   = module.vpc.public_subnet_ids
-  subnet_id     = var.private_subnet_ids
+  subnet_id     = var.private_subnet_ids[0]
   key_name = "udacity"
   tags = {
     Name = "ubuntu"
